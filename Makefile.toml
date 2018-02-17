@@ -20,5 +20,7 @@ script = ['''
 [tasks.publish-docker]
 dependencies = ["build-docker"]
 script = ['''
+  git tag "v$CARGO_MAKE_CRATE_VERSION"
+	git push origin "v$CARGO_MAKE_CRATE_VERSION"
   docker push "longshorej/jason-longshore:$CARGO_MAKE_CRATE_VERSION"
 ''']
