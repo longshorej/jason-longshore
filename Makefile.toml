@@ -7,12 +7,18 @@ dependencies = ["clean"]
 command = "cargo"
 args = ["build", "--release", "--target=x86_64-unknown-linux-musl"]
 
-[tasks.docker]
+[tasks.build-docker]
 dependencies = ["build-linux"]
 script = ['''
 	rm -rf target/docker
   mkdir -p target/docker
 	cp Dockerfile target/docker
   cp target/x86_64-unknown-linux-musl/release/jason-longshore target/docker
-  docker build -t "jason-longshore:$CARGO_MAKE_CRATE_VERSION" target/docker
+  docker build -t "longshorej/jason-longshore:$CARGO_MAKE_CRATE_VERSION" target/docker
+''']
+
+[tasks.publish-docker]
+dependencies = ["build-docker"]
+script = ['''
+  docker push "longshorej/jason-longshore:$CARGO_MAKE_CRATE_VERSION"
 ''']
