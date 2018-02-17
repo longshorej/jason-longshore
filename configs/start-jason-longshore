@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [ "$1" = "" ]; then
+  echo "usage: $0 <version>"
+  exit 1
+fi
+
+docker rm jason-longshore &>/dev/null || true
+
+docker pull longshorej/jason-longshore:"$1"
+
+docker run -d --name jason-longshore -p 3000:3000 longshorej/jason-longshore:"$1"
