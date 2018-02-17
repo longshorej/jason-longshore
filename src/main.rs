@@ -19,6 +19,7 @@ const URL_KEYBASE: &str = "https://keybase.io/longshorej";
 fn page(sub_title: &str, section: &str, c: Fragment) -> String {
     let frag = html(&[
         head(&[
+            meta(&[http_equiv("Content-Type"), rust_tags::attributes::content("text/html; charset=UTF-8")]),
             title(&[format!("{} - Jason Longshore", sub_title).into()]),
             link(&[rel("stylesheet"), href("/css")])
         ]),
