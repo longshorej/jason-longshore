@@ -306,9 +306,9 @@ impl Service for JasonLongshore {
 }
 
 fn main() {
-    let addr = "127.0.0.1:3000".parse().unwrap();
+    let addr_str = "0.0.0.0:3000";
+    let addr = addr_str.parse().unwrap();
     let server = Http::new().bind(&addr, || Ok(JasonLongshore)).unwrap();
+    println!("listening on {}", addr_str);
     server.run().unwrap();
-
-
 }
