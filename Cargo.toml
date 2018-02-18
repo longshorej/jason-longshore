@@ -1,10 +1,9 @@
 [package]
 name = "jason-longshore"
 version = "0.1.0"
-authors = ["Jason Longshore <longshorej@gmail.com>"]
+authors = ["Jason Longshore <hello@jasonlongshore.com>"]
 
 [dependencies]
 futures = "0.1.14"
 hyper = "0.11"
-rust-tags = "0.2.0"
-#rust-tags = { path = "../rustags" }
+rust-tags = "0.3.0"

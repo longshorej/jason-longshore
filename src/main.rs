@@ -29,7 +29,6 @@ impl Service for JasonLongshore {
         let (ct, body) = match (req.method(), req.path()) {
             (&Method::Get, "/") => (html, page_home::content()),
             (&Method::Get, "/css") => (css, page_css::content()),
-            (&Method::Get, "/resume") => (html, page_resume::content()),
             (&Method::Get, "/projects") => (html, page_projects::content()),
             (&Method::Get, "/blog") => (html, page_blog::content()),
             (&Method::Get, "/contact") => (html, page_contact::content()),
@@ -40,6 +39,7 @@ impl Service for JasonLongshore {
         };
 
         let mut response = response.with_header(ct);
+
 
         response.set_body(body);
 

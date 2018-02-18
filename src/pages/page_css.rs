@@ -20,6 +20,9 @@ pub fn content() -> String {
             margin-top: 30px;
         }
 
+        #content {
+            padding-bottom: 30px;
+        }
 
         a, a:link, a:visited {
             color: #ffffff;

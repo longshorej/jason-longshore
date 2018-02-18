@@ -6,7 +6,6 @@ use rust_tags::attributes::*;
 use rust_tags::core::*;
 use rust_tags::tags::*;
 use rust_tags::tags::{title};
-use rust_tags::extras::*;
 
 pub mod page_404;
 pub mod page_blog;
@@ -14,7 +13,6 @@ pub mod page_contact;
 pub mod page_css;
 pub mod page_home;
 pub mod page_projects;
-pub mod page_resume;
 
 pub const URL_KEYBASE: &str = "https://keybase.io/longshorej";
 
@@ -65,7 +63,6 @@ fn content(c: Fragment, section: &str) -> Fragment {
             id("nav"),
             class("col-3"),
             div(&[class("link"), a(&[href("/"), class(class_name("home")), "Home".into()])]),
-            div(&[class("link"), a(&[href("/resume"), class(class_name("resume")), "Résumé".into()])]),
             div(&[class("link"), a(&[href("/projects"), class(class_name("projects")), "Projects".into()])]),
             div(&[class("link"), a(&[href("/contact"), class(class_name("contact")), "Contact".into()])]),
             br(),
