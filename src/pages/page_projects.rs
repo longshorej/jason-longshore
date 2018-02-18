@@ -30,7 +30,7 @@ pub fn content() -> String {
 
       "
       The source code to this website. It's a simple HTTP server written in Rust
-      that uses rust_tags for its content.
+      that uses rust-tags for its content.
       ".into(),
     ]))
 }

@@ -19,6 +19,7 @@ pub const URL_KEYBASE: &str = "https://keybase.io/longshorej";
 pub fn page(sub_title: &str, section: &str, c: Fragment) -> String {
     let frag = html(&[
         head(&[
+            raw(r###"<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114338185-1"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-114338185-1")</script>"###),
             meta(&[http_equiv("Content-Type"), rust_tags::attributes::content("text/html; charset=UTF-8")]),
             title(&[format!("{} - Jason Longshore", sub_title).into()]),
             link(&[rel("stylesheet"), href("/css")])
