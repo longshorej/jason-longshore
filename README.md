@@ -21,6 +21,7 @@ cargo make docker
 This project is build and published to [DockerHub](https://hub.docker.com/r/longshorej/jason-longshore/). To make a new release, follow the steps below.
 
 1) Edit `Cargo.toml` and increment the release version.
-2) Commit your changes.
-3) Login with `docker login`
-4) Run `cargo make publish-docker`
+2) `cargo clean; cargo test; cargo build`
+3) Commit all changes, including Cargo.lock
+4) Login with `docker login`
+5) Run `cargo make publish-docker`

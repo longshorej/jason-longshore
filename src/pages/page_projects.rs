@@ -19,13 +19,6 @@ pub fn content() -> String {
       created using plain function calls.
       ".into(),
 
-      h4(&[a(&[href("https://developer.lightbend.com/docs/reactive-platform-tooling/latest/"), "Reactive Platform Tooling".into()])]),
-
-      "
-      A collection of tools to standardize and simplify the deployment of
-      Lightbend Reactive Platform applications on Kubernetes.
-      ".into(),
-
       h4(&[a(&[href("https://github.com/longshorej/jason-longshore"), "jason-longshore".into()])]),
 
       "
