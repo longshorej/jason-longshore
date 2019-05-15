@@ -2,6 +2,10 @@
 
 This is the source code for my personal website.
 
+### End Of Life
+
+This project has been superceded: https://github.com/longshorej/jasonlongshore.com
+
 ### Build
 
 #### Static Binary (Linux)
